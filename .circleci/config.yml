@@ -39,13 +39,3 @@ jobs:
           paths:
             - ~/.gradle
           key: v1-dependencies-{{ checksum "build.gradle" }}
-
-      # run tests!
-      - run: ./gradlew lint test
-      # Store test results
-      - store_artifacts:
-          path: app/build/reports
-          destination: reports
-
-      - store_test_results:
-          path: app/build/test-results
