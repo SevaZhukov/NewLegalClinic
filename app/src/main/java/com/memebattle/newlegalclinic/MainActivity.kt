@@ -2,6 +2,7 @@ package com.memebattle.newlegalclinic
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.lifecycle.LiveData
 
 class MainActivity : AppCompatActivity() {
 
