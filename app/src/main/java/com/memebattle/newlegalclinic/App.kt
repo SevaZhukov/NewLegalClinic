@@ -1,12 +1,13 @@
 package com.memebattle.newlegalclinic
 
 import android.app.Application
-import com.memebattle.newlegalclinic.di.core.AppComponent
-import com.memebattle.newlegalclinic.di.core.DaggerAppComponent
-import com.memebattle.newlegalclinic.di.core.module.AppModule
-import com.memebattle.newlegalclinic.di.core.module.RetrofitModule
-import com.memebattle.newlegalclinic.di.sub.first.FirstComponent
-import com.memebattle.newlegalclinic.di.sub.first.module.FirstModule
+import com.memebattle.newlegalclinic.core.di.core.AppComponent
+import com.memebattle.newlegalclinic.core.di.core.DaggerAppComponent
+import com.memebattle.newlegalclinic.core.di.core.module.AppModule
+import com.memebattle.newlegalclinic.core.di.core.module.RetrofitModule
+import com.memebattle.newlegalclinic.core.di.sub.auth.AuthComponent
+import com.memebattle.newlegalclinic.core.di.sub.auth.module.AuthApiModule
+import com.memebattle.newlegalclinic.core.di.sub.auth.module.AuthSettingsModule
 
 class App : Application() {
 
@@ -15,7 +16,7 @@ class App : Application() {
     }
 
     lateinit var appComponent: AppComponent
-    private var firstComponent: FirstComponent? = null
+    private var authComponent: AuthComponent? = null
 
     override fun onCreate() {
         super.onCreate()
@@ -27,13 +28,14 @@ class App : Application() {
     }
 
     fun plusFirstComponent() {
-        if (firstComponent == null)
-            firstComponent = appComponent.firstComponentBuilder()
-                    .firstModule(FirstModule())
+        if (authComponent == null)
+            authComponent = appComponent.firstComponentBuilder()
+                    .apiModule(AuthApiModule())
+                    .settingsModule(AuthSettingsModule())
                     .buid()
     }
 
     fun removeFirstComponent() {
-        firstComponent = null
+        authComponent = null
     }
 }

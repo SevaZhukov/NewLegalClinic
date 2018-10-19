@@ -1,8 +1,8 @@
-package com.memebattle.newlegalclinic
+package com.memebattle.newlegalclinic.feature.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.lifecycle.LiveData
+import com.memebattle.newlegalclinic.R
 
 class MainActivity : AppCompatActivity() {
 

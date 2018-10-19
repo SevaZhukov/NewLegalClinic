@@ -1,4 +1,4 @@
-package com.memebattle.newlegalclinic.di.core.module
+package com.memebattle.newlegalclinic.core.di.core.module
 
 import dagger.Module
 import dagger.Provides
