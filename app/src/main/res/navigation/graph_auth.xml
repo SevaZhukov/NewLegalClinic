@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.memebattle.newlegalclinic.feature.auth.sign_in.presentation.SignInFragment"
+        android:name="com.memebattle.newlegalclinic.feature.auth.sign_in.SignInFragment"
         android:label="fragment_sign_in"
         tools:layout="@layout/fragment_sign_in" >
         <action

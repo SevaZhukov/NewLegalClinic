@@ -1,4 +1,4 @@
-package com.memebattle.newlegalclinic.feature.auth.sign_in.domain
+package com.memebattle.newlegalclinic.feature.auth.core.domain
 
 import android.content.SharedPreferences
 

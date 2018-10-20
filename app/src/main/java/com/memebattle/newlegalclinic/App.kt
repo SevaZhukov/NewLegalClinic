@@ -27,7 +27,7 @@ class App : Application() {
                 .build()
     }
 
-    fun plusFirstComponent() {
+    fun plusAuthComponent() {
         if (authComponent == null)
             authComponent = appComponent.firstComponentBuilder()
                     .apiModule(AuthApiModule())
@@ -35,7 +35,7 @@ class App : Application() {
                     .buid()
     }
 
-    fun removeFirstComponent() {
+    fun removeAuthComponent() {
         authComponent = null
     }
 }

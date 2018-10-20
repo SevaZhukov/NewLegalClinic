@@ -1,9 +1,9 @@
-package com.memebattle.newlegalclinic.feature.auth.sign_in.presentation
+package com.memebattle.newlegalclinic.feature.auth.sign_in
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.memebattle.newlegalclinic.core.domain.BaseCallback
-import com.memebattle.newlegalclinic.feature.auth.sign_in.domain.AuthApiService
+import com.memebattle.newlegalclinic.feature.auth.core.domain.AuthApiService
 import java.util.*
 import javax.inject.Inject
 

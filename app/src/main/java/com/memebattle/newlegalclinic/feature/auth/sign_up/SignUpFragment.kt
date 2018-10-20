@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.memebattle.newlegalclinic.R
+import kotlinx.android.synthetic.main.fragment_sign_up.view.*
 
 class SignUpFragment : Fragment() {
 
@@ -16,7 +17,10 @@ class SignUpFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val v = inflater.inflate(R.layout.fragment_sign_up, container, false)
-        navController = Navigation.findNavController(v)
+        navController = Navigation.findNavController(activity!!, R.id.nav_host_auth)
+        v.backToSignIn.setOnClickListener {
+            navController.popBackStack()
+        }
         return v
     }
 }
